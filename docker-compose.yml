@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  ionosddns:
+    build:
+      context: .
+      dockerfile: files/Dockerfile
+    environment:
+      - LOOP_TIME=0
+    volumes:
+      - ./config.py:/app/config.py
+    ports:
+      - "8081:80" # In case the user who runs it is not "root"
+    restart: always
