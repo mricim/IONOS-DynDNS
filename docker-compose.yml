@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: files/Dockerfile
     environment:
-      - LOOP_TIME=0
+      - LOOP_TIME=15
     volumes:
       - ./config.py:/app/config.py
     ports:
